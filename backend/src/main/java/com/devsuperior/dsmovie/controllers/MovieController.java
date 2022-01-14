@@ -21,7 +21,7 @@ public class MovieController {
 
     @GetMapping
 
-    public Page<MovieDTO> findAll(@PageableDefault(sort = "id", direction = Sort.Direction.ASC, page = 0, size = 12)Pageable pageable){
+    public Page<MovieDTO> findAll(@PageableDefault Pageable pageable){
         return service.findAll(pageable);
     }
     @GetMapping(value = "/{id}")
